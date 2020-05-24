@@ -37,7 +37,7 @@ char		*ft_unsigned_base(unsigned long long i, int base)
 	return (str);
 }
 
-int	ft_strcmp(char *s1, char *s2)
+int			ft_strcmp(char *s1, char *s2)
 {
 	int i;
 
@@ -47,14 +47,14 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-int		ft_tolower(int c)
+int			ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;
 	return (c);
 }
 
-int		ft_tomaj(int c)
+int			ft_tomaj(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c -= 32;
