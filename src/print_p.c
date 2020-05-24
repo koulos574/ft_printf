@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_p.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vifontai </var/mail/vifontai>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/24 19:24:55 by vifontai          #+#    #+#             */
+/*   Updated: 2020/05/24 21:38:49 by vifontai         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/printf.h"
 
-void	zero_width_no_prec_p(t_all *a)
+void		zero_width_no_prec_p(t_all *a)
 {
 	if (a->width_number > 2)
 		a->len += a->width_number;
@@ -15,7 +27,7 @@ void	zero_width_no_prec_p(t_all *a)
 		ft_putchar(' ');
 }
 
-void	only_width_p(t_all *a, char *str)
+void		only_width_p(t_all *a, char *str)
 {
 	int len;
 
@@ -42,17 +54,17 @@ void	only_width_p(t_all *a, char *str)
 	free(str);
 }
 
-void	write_p(t_all *a, unsigned long long p)
+void		write_p(t_all *a, unsigned long long p)
 {
-	char *mystr;
-	int i;
+	char	*mystr;
+	int		i;
 
 	i = 1;
-	mystr = ft_strjoin_free_s2("0x",ft_unsigned_base(p, 16));
+	mystr = ft_strjoin_free_s2("0x", ft_unsigned_base(p, 16));
 	while (mystr[i++])
 		mystr[i] = ft_tolower(mystr[i]);
 	if (!(a->flag[PREC]) && !(a->flag[WIDTH]))
-	{  
+	{
 		ft_putstr(mystr);
 		a->len += ft_strlen(mystr);
 		free(mystr);

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_x_and_X.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vifontai </var/mail/vifontai>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/24 19:26:00 by vifontai          #+#    #+#             */
+/*   Updated: 2020/05/24 19:26:22 by vifontai         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/printf.h"
 
 void	prec_and_width_x_part2(t_all *a, char *str, int len)
@@ -12,7 +24,6 @@ void	prec_and_width_x_part2(t_all *a, char *str, int len)
 	while(i-- > len)
 		ft_putchar('0');
 	ft_putstr(str);
-
 }
 
 void	prec_and_width_x(t_all *a, char *str, int len)
