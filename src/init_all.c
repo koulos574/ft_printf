@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   init_all.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vifontai </var/mail/vifontai>              +#+  +:+       +#+        */
+/*   By: vifontai <marvin.42.fr>		            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/24 19:23:42 by vifontai          #+#    #+#             */
 /*   Updated: 2020/05/24 19:23:47 by vifontai         ###   ########.fr       */

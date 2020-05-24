@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vifontai </var/mail/vifontai>              +#+  +:+       +#+        */
+/*   By: vifontai <marvin.42.fr>		            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/24 19:23:35 by vifontai          #+#    #+#             */
 /*   Updated: 2020/05/24 19:23:36 by vifontai         ###   ########.fr       */

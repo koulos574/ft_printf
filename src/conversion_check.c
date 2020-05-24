@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   conversion_check.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vifontai </var/mail/vifontai>              +#+  +:+       +#+        */
+/*   By: vifontai <marvin.42.fr>		            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/24 19:23:19 by vifontai          #+#    #+#             */
 /*   Updated: 2020/05/24 19:23:20 by vifontai         ###   ########.fr       */

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   flags_check.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vifontai </var/mail/vifontai>              +#+  +:+       +#+        */
+/*   By: vifontai <marvin.42.fr>		            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/24 19:23:27 by vifontai          #+#    #+#             */
 /*   Updated: 2020/05/24 19:29:38 by vifontai         ###   ########.fr       */
