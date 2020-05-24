@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vifontai <marvin.42.fr>		            +#+  +:+       +#+        */
+/*   By: vifontai <marvin.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/24 19:24:01 by vifontai          #+#    #+#             */
 /*   Updated: 2020/05/24 19:30:48 by vifontai         ###   ########.fr       */

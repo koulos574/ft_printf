@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   allinwrite.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vifontai <marvin.42.fr>		            +#+  +:+       +#+        */
+/*   By: vifontai <marvin.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/24 19:28:36 by vifontai          #+#    #+#             */
 /*   Updated: 2020/05/24 19:28:43 by vifontai         ###   ########.fr       */
