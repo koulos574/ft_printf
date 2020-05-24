@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   print_x_and_X_part_2.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vifontai <marvin.42.fr>                    +#+  +:+       +#+        */
+/*   By: vifontai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/24 19:26:30 by vifontai          #+#    #+#             */
 /*   Updated: 2020/05/24 21:41:37 by vifontai         ###   ########.fr       */

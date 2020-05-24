@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   width_check.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vifontai <marvin.42.fr>                    +#+  +:+       +#+        */
+/*   By: vifontai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/24 19:27:14 by vifontai          #+#    #+#             */
 /*   Updated: 2020/05/24 19:27:15 by vifontai         ###   ########.fr       */
