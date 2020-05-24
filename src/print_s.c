@@ -90,7 +90,6 @@ void	only_width_string(t_all *a, char *str, int len)
 			ft_putchar(' ');
 		ft_putstr(str);
 	}
-
 }
 
 void	write_s(t_all *a, char *vargs)

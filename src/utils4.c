@@ -12,16 +12,16 @@
 
 #include "../include/printf.h"
 
-static char	*treat_base(unsigned long long i_save, int base, char *str, int count)
+static char	*treat_base(unsigned long long i_save, int b, char *str, int c)
 {
 	while (i_save != 0)
 	{
-		if ((i_save % base) < 10)
-			str[count - 1] = (i_save % base) + 48;
+		if ((i_save % b) < 10)
+			str[c - 1] = (i_save % b) + 48;
 		else
-			str[count - 1] = (i_save % base) + 55;
-		i_save /= base;
-		count--;
+			str[c - 1] = (i_save % b) + 55;
+		i_save /= b;
+		c--;
 	}
 	return (str);
 }

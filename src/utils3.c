@@ -27,7 +27,7 @@ static int		lengthofnu(unsigned int n)
 	while (n != 0)
 	{
 		j++;
-		n = n/10;
+		n = n / 10;
 	}
 	return (j++);
 }

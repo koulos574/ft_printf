@@ -30,7 +30,7 @@ void	prec_and_width_int_part2(t_all *a, char *str, int len, int sign)
 		ft_putchar(' ');
 	if (sign < 0)
 		ft_putchar('-');
-	while(i-- > len)
+	while (i-- > len)
 		ft_putchar('0');
 	ft_putstr(str);
 }
@@ -41,7 +41,7 @@ void	prec_and_width_int(t_all *a, char *str, int len, int sign)
 		prec_and_width_int_part1(a, str, len, sign);
 	else
 		prec_and_width_int_part2(a, str, len, sign);
-	if (ft_strcmp(str,"0"))
+	if (ft_strcmp(str, "0"))
 		free(str);
 }
 
@@ -59,7 +59,7 @@ void	only_prec_int(t_all *a, char *str, int len, int sign)
 	while (a->prec_number-- > len)
 		ft_putchar('0');
 	ft_putstr(str);
-	if (ft_strcmp(str,"0"))
+	if (ft_strcmp(str, "0"))
 		free(str);
 }
 
@@ -84,15 +84,15 @@ void	only_width_int(t_all *a, char *str, int len, int sign)
 	{
 		need_place_int(a, str, len, sign);
 	}
-	if (ft_strcmp(str,"0"))
+	if (ft_strcmp(str, "0"))
 		free(str);
 }
 
 void	write_d(t_all *a, int vargs)
 {
-	char *mystr;
-	int sign;
-	long n;
+	char	*mystr;
+	int		sign;
+	long	n;
 
 	n = vargs;
 	sign = 0;
@@ -109,7 +109,7 @@ void	write_d(t_all *a, int vargs)
 	else if (a->flag[WIDTH] && !(a->flag[PREC]))
 		only_width_int(a, mystr, ft_strlen(mystr), sign);
 	else if (a->flag[PREC] && !(a->flag[WIDTH]))
-		only_prec_int(a, mystr, ft_strlen(mystr), sign);  
+		only_prec_int(a, mystr, ft_strlen(mystr), sign);
 	else if (a->flag[PREC] && a->flag[WIDTH])
 		prec_and_width_int(a, mystr, ft_strlen(mystr), sign);
 }

@@ -21,7 +21,7 @@ void	prec_and_width_x_part2(t_all *a, char *str, int len)
 		a->prec_number = len;
 	while (a->width_number-- > a->prec_number)
 		ft_putchar(' ');
-	while(i-- > len)
+	while (i-- > len)
 		ft_putchar('0');
 	ft_putstr(str);
 }
@@ -39,7 +39,7 @@ void	prec_and_width_x(t_all *a, char *str, int len)
 		a->len += a->prec_number;
 	if (a->flag[MIN])
 	{
-		while(i-- > len)
+		while (i-- > len)
 			ft_putchar('0');
 		ft_putstr(str);
 		if (a->prec_number < len)
@@ -61,7 +61,7 @@ void	only_prec_x(t_all *a, char *str, int len)
 	while (a->prec_number-- > len)
 		ft_putchar('0');
 	ft_putstr(str);
-	if (ft_strcmp(str,"0"))
+	if (ft_strcmp(str, "0"))
 		free(str);
 }
 
@@ -83,14 +83,14 @@ void	only_width_x(t_all *a, char *str, int len)
 		print_width(a);
 		ft_putstr(str);
 	}
-	if (ft_strcmp(str,"0"))
+	if (ft_strcmp(str, "0"))
 		free(str);
 }
 
 void	write_x(t_all *a, unsigned int vargs, int min)
 {
-	char *mystr;
-	int i;
+	char	*mystr;
+	int		i;
 
 	i = 0;
 	mystr = ft_unsigned_base((unsigned long long)vargs, 16);
@@ -104,7 +104,7 @@ void	write_x(t_all *a, unsigned int vargs, int min)
 	}
 	if (mystr == NULL)
 		mystr = "0";
-	if (!(ft_strcmp(mystr,"0")) && a->prec_number == 0)
+	if (!(ft_strcmp(mystr, "0")) && a->prec_number == 0)
 		zero_width_no_prec_x(a);
 	else if (!(a->flag[PREC]) && !(a->flag[WIDTH]))
 		no_width_no_prec_x(a, mystr);

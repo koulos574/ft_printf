@@ -19,7 +19,7 @@ void	zero_width_no_prec_int(t_all *a)
 		ft_putchar(' ');
 }
 
-void    no_width_no_prec_int(t_all *a, int sign, char *mystr)
+void	no_width_no_prec_int(t_all *a, int sign, char *mystr)
 {
 	a->len += ft_strlen(mystr);
 	if (sign < 0)
@@ -28,7 +28,7 @@ void    no_width_no_prec_int(t_all *a, int sign, char *mystr)
 		a->len += 1;
 	}
 	ft_putstr(mystr);
-	if(ft_strcmp(mystr,"0"))
+	if (ft_strcmp(mystr,"0"))
 		free(mystr);
 }
 
@@ -44,7 +44,7 @@ void	recup_info_length_int(t_all *a, int len)
 
 void	need_place_int(t_all *a, char *str, int len, int sign)
 {
-	if (sign < 0) 
+	if (sign < 0)
 		len += 1;
 	if (a->flag[ZERO] && sign < 0)
 		ft_putchar('-');
@@ -72,7 +72,7 @@ void	prec_and_width_int_part1(t_all *a, char *str, int len, int sign)
 		if (a->width_number <= len)
 			a->len++;
 	}
-	while(i-- > len)
+	while (i-- > len)
 		ft_putchar('0');
 	ft_putstr(str);
 	if (sign < 0 && a->prec_number <= len)

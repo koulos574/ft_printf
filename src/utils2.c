@@ -12,7 +12,7 @@
 
 #include "../include/printf.h"
 
-char		*reverse(char *str)
+char			*reverse(char *str)
 {
 	unsigned int i;
 	unsigned int j;
@@ -56,7 +56,7 @@ static int		lengthofn(long n)
 	while (n != 0)
 	{
 		j++;
-		n = n/10;
+		n = n / 10;
 	}
 	return (j++);
 }
@@ -75,14 +75,14 @@ char			*ft_itoa(long n)
 		return ("0");
 	if (!(str = (char *)malloc(sizeof(char) * j + 1)))
 		return (0);
-	j = 0;	
+	j = 0;
 	while (long_n > 0)
 	{
 		str[j++] = long_n % 10 + '0';
 		long_n /= 10;
 	}
-	 if (sign(n) == 1)
-	 	str[j++] = '-';
+	if (sign(n) == 1)
+		str[j++] = '-';
 	str[j] = '\0';
 	return (reverse(str));
 }

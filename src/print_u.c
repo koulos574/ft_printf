@@ -21,10 +21,9 @@ void	prec_and_width_uint_part2(t_all *a, char *str, int len)
 		a->prec_number = len;
 	while (a->width_number-- > a->prec_number)
 		ft_putchar(' ');
-	while(i-- > len)
+	while (i-- > len)
 		ft_putchar('0');
 	ft_putstr(str);
-
 }
 
 void	prec_and_width_uint(t_all *a, char *str, int len)
@@ -40,7 +39,7 @@ void	prec_and_width_uint(t_all *a, char *str, int len)
 		a->len += a->prec_number;
 	if (a->flag[MIN])
 	{
-		while(i-- > len)
+		while (i-- > len)
 			ft_putchar('0');
 		ft_putstr(str);
 		if (a->prec_number < len)
@@ -50,7 +49,7 @@ void	prec_and_width_uint(t_all *a, char *str, int len)
 	}
 	else
 		prec_and_width_uint_part2(a, str, len);
-	free(str);    
+	free(str);
 }
 
 void	only_prec_uint(t_all *a, char *str, int len)
@@ -71,7 +70,6 @@ void	only_width_uint(t_all *a, char *str, int len)
 		a->len += len;
 	else
 		a->len += a->width_number;
-
 	if (a->flag[MIN])
 	{
 		ft_putstr(str);
@@ -86,7 +84,6 @@ void	only_width_uint(t_all *a, char *str, int len)
 	}
 	free(str);
 }
-
 
 void	write_u(t_all *a, unsigned int vargs)
 {

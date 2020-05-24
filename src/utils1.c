@@ -29,7 +29,7 @@ void	ft_putstr(char *str)
 	int i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
 		ft_putchar(str[i]);
 		i++;
@@ -41,7 +41,7 @@ int		ft_strlen(char *str)
 	int i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 		i++;
 	return (i);
 }
@@ -56,7 +56,8 @@ char	*ft_strjoin_free_s2(const char *s1, const char *s2)
 		return (NULL);
 	j = 0;
 	i = -1;
-	if (!(res = (char *)malloc(sizeof(char) * (ft_strlen((char *)s1) + ft_strlen((char *)s2)
+	if (!(res = (char *)malloc(sizeof(char) * (ft_strlen((char *)s1) 
+		+ ft_strlen((char *)s2)
 						+ 1))))
 		return (NULL);
 	while (s1[++i])
@@ -64,7 +65,7 @@ char	*ft_strjoin_free_s2(const char *s1, const char *s2)
 	while (s2[j])
 		res[i++] = s2[j++];
 	res[i] = '\0';
-	if (ft_strcmp((char *)s2,"0"))
+	if (ft_strcmp((char *)s2, "0"))
 		free((char *)s2);
 	return (res);
 }
