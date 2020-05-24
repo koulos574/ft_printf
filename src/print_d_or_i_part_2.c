@@ -28,7 +28,7 @@ void	no_width_no_prec_int(t_all *a, int sign, char *mystr)
 		a->len += 1;
 	}
 	ft_putstr(mystr);
-	if (ft_strcmp(mystr,"0"))
+	if (ft_strcmp(mystr, "0"))
 		free(mystr);
 }
 

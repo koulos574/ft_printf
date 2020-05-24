@@ -14,9 +14,9 @@
 
 char			*reverse(char *str)
 {
-	unsigned int i;
-	unsigned int j;
-	char		l;
+	unsigned int	i;
+	unsigned int	j;
+	char			l;
 
 	i = 0;
 	j = 0;

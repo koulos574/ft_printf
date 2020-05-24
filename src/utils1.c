@@ -56,7 +56,7 @@ char	*ft_strjoin_free_s2(const char *s1, const char *s2)
 		return (NULL);
 	j = 0;
 	i = -1;
-	if (!(res = (char *)malloc(sizeof(char) * (ft_strlen((char *)s1) 
+	if (!(res = (char *)malloc(sizeof(char) * (ft_strlen((char *)s1)
 		+ ft_strlen((char *)s2)
 						+ 1))))
 		return (NULL);
