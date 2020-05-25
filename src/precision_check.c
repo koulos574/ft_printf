@@ -23,6 +23,8 @@ void	precision_check(t_all *a)
 	{
 		a->flag[STAR] = 1;
 		a->prec_number = va_arg(a->arg, int);
+		if (a->prec_number < 0)
+			a->keep_track_prec_neg = 1;
 		a->i++;
 	}
 	else

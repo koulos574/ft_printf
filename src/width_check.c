@@ -23,6 +23,7 @@ void	width_check(t_all *a)
 		{
 			a->flag[MIN] = 1;
 			a->width_number *= -1;
+			a->keep_track_width_neg = 1;
 		}
 		a->i++;
 	}

@@ -40,6 +40,8 @@ void	recup_info_length_int(t_all *a, int len)
 		a->len += a->width_number;
 	else if (a->prec_number >= len && a->prec_number >= a->width_number)
 		a->len += a->prec_number;
+	if (a->prec_number < len)
+		a->prec_number = len;
 }
 
 void	need_place_int(t_all *a, char *str, int len, int sign)
@@ -70,6 +72,8 @@ void	prec_and_width_int_part1(t_all *a, char *str, int len, int sign)
 		ft_putchar('-');
 		a->prec_number++;
 		if (a->width_number <= len)
+			a->len++;
+		if (a->width_number > len && a->width_number < a->prec_number)
 			a->len++;
 	}
 	while (i-- > len)

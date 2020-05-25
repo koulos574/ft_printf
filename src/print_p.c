@@ -34,7 +34,7 @@ void		only_width_p(t_all *a, char *str)
 	if (!(ft_strcmp(str, "0x0")))
 		len = 3;
 	else
-		len = 14;
+		len = ft_strlen(str);
 	if (a->width_number > len)
 		a->len += a->width_number;
 	if (len >= a->width_number)

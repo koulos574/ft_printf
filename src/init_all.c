@@ -27,6 +27,8 @@ void	refresh(t_all *a)
 	a->flag[ZERO] = 0;
 	a->flag[MIN] = 0;
 	a->flag[STAR] = 0;
+	a->keep_track_width_neg = 0;
+	a->keep_track_prec_neg = 0;
 	a->prec_number = -1;
 	a->width_number = 0;
 	a->conversion = '\0';

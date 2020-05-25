@@ -12,15 +12,21 @@
 
 #include "../include/printf.h"
 
-int		recup_info_length_string(t_all *a, int len)
+int		recup_info_length_string(t_all *a, int len, char *str)
 {
 	int cheat;
 
 	cheat = 0;
-	if (a->width_number >= a->prec_number)
+	if (a->prec_number < 0)
+		a->prec_number = len;
+	if (!(ft_strcmp(str, "\0")) && a->width_number > 0)
+		a->len += a->width_number;
+	else if (a->width_number >= a->prec_number)
 		a->len += a->width_number;
 	else if (a->prec_number > a->width_number && a->prec_number < len)
 		a->len += a->prec_number;
+	else if (a->prec_number > a->width_number && len < a->width_number)
+		a->len += a->width_number;
 	else
 		a->len += len;
 	if (a->prec_number > len)
@@ -38,7 +44,7 @@ void	prec_and_width_string(t_all *a, char *str, int len)
 
 	tmp = len;
 	i = -1;
-	cheat = recup_info_length_string(a, len);
+	cheat = recup_info_length_string(a, len,str);
 	if (a->flag[MIN])
 	{
 		if (a->prec_number < len)
@@ -64,12 +70,21 @@ void	only_prec_string(t_all *a, char *str, int len)
 	int i;
 
 	i = -1;
-	if (a->prec_number > len)
-		a->len += len;
+	if (a->prec_number >= 0)
+	{
+		if (a->prec_number > len)
+			a->len += len;
+		else
+			a->len += a->prec_number;
+		while (i++ < a->prec_number - 1 && i < len)
+			ft_putchar(str[i]);
+	}
 	else
-		a->len += a->prec_number;
-	while (i++ < a->prec_number - 1 && i < len)
-		ft_putchar(str[i]);
+	{
+		a->len += len;
+		ft_putstr(str); 
+	}
+	
 }
 
 void	only_width_string(t_all *a, char *str, int len)
@@ -82,12 +97,17 @@ void	only_width_string(t_all *a, char *str, int len)
 	{
 		ft_putstr(str);
 		while (a->width_number-- > len)
-			ft_putchar(' ');
+				ft_putchar(' ');
 	}
 	else
 	{
 		while (a->width_number-- > len)
-			ft_putchar(' ');
+		{
+			if (a->flag[ZERO])
+				ft_putchar('0');
+			else
+				ft_putchar(' ');
+		}
 		ft_putstr(str);
 	}
 }

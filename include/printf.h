@@ -36,7 +36,9 @@ typedef	struct	s_printf_struct
 	char		conversion;
 	char		*all_conversions;
 	int			prec_number;
+	int			keep_track_prec_neg;
 	int			width_number;
+	int			keep_track_width_neg;
 	int			char_count;
 }				t_all;
 
@@ -124,7 +126,7 @@ void			write_s(t_all *a, char *vargs);
 void			only_width_string(t_all *a, char *str, int len);
 void			only_prec_string(t_all *a, char *vargs, int len);
 void			prec_and_width_string(t_all *a, char *vargs, int len);
-int				recup_info_length_string(t_all *a, int len);
+int				recup_info_length_string(t_all *a, int len, char *str);
 
 /*
 ** print_p

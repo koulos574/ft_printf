@@ -23,5 +23,6 @@ void	no_width_no_prec_uint(t_all *a, char *mystr)
 {
 	a->len += ft_strlen(mystr);
 	ft_putstr(mystr);
-	free(mystr);
+	if (ft_strcmp(mystr, "0"))
+		free(mystr);
 }
