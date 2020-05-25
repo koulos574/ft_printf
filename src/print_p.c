@@ -51,7 +51,27 @@ void		only_width_p(t_all *a, char *str)
 		print_width(a);
 		ft_putstr(str);
 	}
-	free(str);
+	if (ft_strcmp(str, "0x0"))
+		free(str);
+}
+
+void		only_prec_p(t_all *a, char *mystr)
+{
+	int len;
+
+	if (!(ft_strcmp(mystr, "0x0")))
+		len = 3;
+	else
+		len = ft_strlen(mystr);
+	if (a->prec_number > len)
+		a->len += a->prec_number;
+	else
+		a->len += len;
+	while (a->prec_number-- > len)
+		ft_putchar('0');
+	ft_putstr(mystr);
+	if (ft_strcmp(mystr, "0"))
+		free(mystr);
 }
 
 void		write_p(t_all *a, unsigned long long p)
@@ -73,4 +93,6 @@ void		write_p(t_all *a, unsigned long long p)
 		zero_width_no_prec_p(a);
 	else if (a->flag[WIDTH])
 		only_width_p(a, mystr);
+	else if (a->flag[PREC])
+		only_prec_p(a, mystr);
 }

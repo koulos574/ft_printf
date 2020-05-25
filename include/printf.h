@@ -132,6 +132,9 @@ int				recup_info_length_string(t_all *a, int len, char *str);
 ** print_p
 */
 void			write_p(t_all *a, unsigned long long p);
+void			only_prec_p(t_all *a, char *mystr);
+void			only_width_p(t_all *a, char *str);
+void			zero_width_no_prec_p(t_all *a);
 
 /*
 ** print_u
