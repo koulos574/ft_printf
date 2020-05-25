@@ -12,10 +12,6 @@
 
 #include "../include/printf.h"
 
-
-#include <stdio.h>
-
-
 void	parser(t_all *a)
 {
 	while (a->str[a->i])

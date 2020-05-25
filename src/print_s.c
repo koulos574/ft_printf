@@ -44,7 +44,7 @@ void	prec_and_width_string(t_all *a, char *str, int len)
 
 	tmp = len;
 	i = -1;
-	cheat = recup_info_length_string(a, len,str);
+	cheat = recup_info_length_string(a, len, str);
 	if (a->flag[MIN])
 	{
 		if (a->prec_number < len)
@@ -82,9 +82,8 @@ void	only_prec_string(t_all *a, char *str, int len)
 	else
 	{
 		a->len += len;
-		ft_putstr(str); 
+		ft_putstr(str);
 	}
-	
 }
 
 void	only_width_string(t_all *a, char *str, int len)
@@ -97,7 +96,7 @@ void	only_width_string(t_all *a, char *str, int len)
 	{
 		ft_putstr(str);
 		while (a->width_number-- > len)
-				ft_putchar(' ');
+			ft_putchar(' ');
 	}
 	else
 	{

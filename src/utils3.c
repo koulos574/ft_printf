@@ -53,3 +53,25 @@ char			*ft_itoa_uint(unsigned int n)
 	str[j] = '\0';
 	return (reverse(str));
 }
+
+void		help_place(t_all *a, int sign, int c)
+{
+	if (a->keep_track_prec_neg)
+	{
+		if (sign < 0 && a->flag[ZERO])
+			ft_putchar('-');
+		while (a->width_number-- > a->prec_number)
+			if (a->flag[ZERO])
+				ft_putchar('0');
+			else
+				ft_putchar(' ');
+		if (sign < 0 && !(a->flag[ZERO]))
+			ft_putchar('-');
+	}
+	else
+		while (a->width_number-- > a->prec_number)
+			if (a->flag[ZERO] && c++ > 0)
+				ft_putchar('0');
+			else
+				ft_putchar(' ');
+}

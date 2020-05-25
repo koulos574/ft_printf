@@ -28,24 +28,7 @@ void	prec_and_width_int_part2(t_all *a, char *str, int len, int sign)
 			a->len++;
 	}
 	c = a->prec_number - a->width_number;
-	if (a->keep_track_prec_neg)
-	{	
-		if (sign < 0 && a->flag[ZERO])
-			ft_putchar('-');
-		while (a->width_number-- > a->prec_number)
-			if (a->flag[ZERO])
-				ft_putchar('0');
-			else
-				ft_putchar(' ');
-		if (sign < 0 && !(a->flag[ZERO]))
-			ft_putchar('-');
-	}
-	else
-		while (a->width_number-- > a->prec_number)
-			if (a->flag[ZERO] && c++ > 0)
-				ft_putchar('0');
-			else
-				ft_putchar(' ');
+	help_place(a, sign, c);
 	if (sign < 0 && !(a->keep_track_prec_neg))
 		ft_putchar('-');
 	while (i-- > len)
@@ -99,7 +82,6 @@ void	only_width_int(t_all *a, char *str, int len, int sign)
 			a->flag[ZERO] = 0;
 		a->width_number -= len;
 		print_width(a);
-
 	}
 	else
 		need_place_int(a, str, len, sign);

@@ -86,7 +86,7 @@ void	only_width_x(t_all *a, char *str, int len)
 	else
 		a->len += len;
 	if (a->keep_track_width_neg == 1)
-			a->flag[ZERO] = 0;
+		a->flag[ZERO] = 0;
 	if (a->flag[MIN])
 	{
 		ft_putstr(str);

@@ -21,7 +21,7 @@ void	write_percent(t_all *a)
 		{
 			ft_putchar('%');
 			a->width_number--;
-			a->flag[ZERO] = 0; 
+			a->flag[ZERO] = 0;
 			print_width(a);
 		}
 		else
